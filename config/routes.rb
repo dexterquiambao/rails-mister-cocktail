@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # added root to - not sure if this is required?
-  root to: "cocktails#index"
-  # or root 'cocktails#index' is a shortcut for the above code - Source: Ruby Docs > routing
+  # root to: "cocktails#index"
   resources :cocktails, only: [:index, :show, :new, :create] do
     resources :doses, only: [:new, :create]
   end
+  resources :doses, only: [:destroy]
+
+  # get 'cocktails', to: 'cocktails#index'
+
+  # Below route works...
+  # get 'index' => "cocktails#index"
 end
