@@ -10,3 +10,32 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+#navbar {
+  background-color: #F1C453;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #766D59;
+  font-family: "Arial";
+  padding: 25px 25px 25px 55px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    color: #766D59;
+  }
+  font-size: 20px;
+}
+
+#new_cocktail {
+  font-size: 20px;
+}
